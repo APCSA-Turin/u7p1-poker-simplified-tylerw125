@@ -44,7 +44,7 @@ public class Player{
         return "Nothing";
     }
 
-    public void SortCards() {
+    public void sortAllCards() {
         allCards.sort(Comparator.comparingInt(eachCard -> Utility.getRankValue(eachCard.getRank())));
     } 
 

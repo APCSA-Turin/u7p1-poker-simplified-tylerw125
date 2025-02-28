@@ -11,8 +11,8 @@ public class Game{
         } else if (p2Rank > p1Rank) {
             return "Player 2 wins!";
         } else {
-            p1.SortCards();
-            p2.SortCards();
+            p1.sortAllCards();
+            p2.sortAllCards();
             for (int i = p1.getAllCards().size() - 1; i >= 0; i--) {
                 int p1CardRank = Utility.getRankValue(p1.getAllCards().get(i).getRank());
                 int p2CardRank = Utility.getRankValue(p2.getAllCards().get(i).getRank());
@@ -27,8 +27,18 @@ public class Game{
         return "Error";
     }
 
-    public static void play(){ //simulate card playing
-    
+    public static void play() { //simulate card playing
+        Deck deck = new Deck();
+        Player p1 = new Player();
+        Player p2 = new Player();
+        p1.receiveCard(deck.drawCard());
+        p1.receiveCard(deck.drawCard());
+        p2.receiveCard(deck.drawCard());
+        p2.receiveCard(deck.drawCard());
+        ArrayList<Card> communityCards = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+
+        }
     }
         
         
