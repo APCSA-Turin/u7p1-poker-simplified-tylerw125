@@ -1,0 +1,16 @@
+{
+    "name": "My Codespace with X11",
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "runArgs": [
+      "--network=host"
+    ],
+    "forwardPorts": [
+      6000
+    ],
+    "remoteEnv": {
+      "DISPLAY": "host.docker.internal:0"
+    }
+  }
+  

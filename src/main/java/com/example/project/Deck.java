@@ -29,9 +29,13 @@ public class Deck{
         Collections.shuffle(cards);
     }
 
-    public  Card drawCard() {
-       return new Card("","");
+    public Card drawCard() {
+        if (!cards.isEmpty()) {
+            return cards.remove(0);
+        }
+        return null;
     }
+    
 
     public  boolean isEmpty() {
         return cards.isEmpty();
