@@ -86,7 +86,6 @@ public class Player{
     }
     return false;
 }
-
     public boolean isThreeOfAKind(ArrayList<Integer> rankFrequency) {
         return rankFrequency.contains(3);
     }
@@ -97,7 +96,6 @@ public class Player{
                 pairCount++;
             }
         }
-
         System.out.println("DEBUG: Pair count for Two Pair: " + pairCount);
         return pairCount == 2;
     }
