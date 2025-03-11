@@ -60,8 +60,17 @@ public class PokerGameUI {
         dealButton = new JButton("Draw");
         resetButton = new JButton("Reset");
 
-        dealButton.addActionListener(e -> playGame());
-        resetButton.addActionListener(e -> resetGame());
+        dealButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                playGame();
+            }
+        });
+        
+        resetButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                resetGame();
+            }
+        });
 
         centerPanel.add(resultLabel);  // Add result label above scoreboard
         centerPanel.add(scoreLabel);
